@@ -17,13 +17,14 @@
       const recipeCellElement = document
         .getElementById("recipe-cell")
         .content.cloneNode(true);
-      console.log(recipeCellElement);
       recipeCellElement.querySelector("img").src = recipe.src;
       recipeCellElement.getElementById("name").textContent = recipe.name;
       recipeCellElement.getElementById("description").textContent =
         recipe.description;
       const currentUrl = new URL(window.location.href);
-      const recipeUrl = new URL("http://" + currentUrl.host + "/recipe.html");
+      const recipeUrl = new URL(
+        window.location.href.replace("/recipes.html", "/recipe.html")
+      );
       recipeUrl.searchParams.append("recipe", recipe.name);
       recipeCellElement.querySelector("a").href = recipeUrl;
       recipesGridElement.appendChild(recipeCellElement);
