@@ -1,0 +1,63 @@
+[
+  {
+    "name": "PLOV",
+    "ingredients": [
+      "Carrots",
+      "Rice",
+      "Water",
+      "Raisins",
+      "Salt",
+      "Pepper",
+      "Cumin",
+      "Onions",
+      "Meat Beef",
+      "Olive Oil",
+      "Black Seed Oil"
+    ],
+    "directions": [
+      "Add the two oils and let it get super heated until the smoke comes out",
+      "Add the meat and let it fry",
+      "After the meat gets dark brown, add the onions and let it fry more",
+      "Add the thinly sliced carrots on top of the meat and make sure it fully covers the meat",
+      "Then add the raisins along with salt, pepper, and cumin",
+      "Let them fry until soft with the lid covered",
+      "After, add the washed rice on top of the carrots with water until it covers the rice fully and cover the lid",
+      "Once the rice is soft, the food is ready."
+    ],
+    "cook_time": "1 hour 30 Min",
+    "serving_size": 1,
+    "src": "https://www.alyonascooking.com/wp-content/uploads/2019/05/plov-recipe-9.jpg"
+  },
+  {
+    "name": "SAMBUSA",
+    "ingredients": [
+      "Ground Beef",
+      "Salt",
+      "Pepper",
+      "Melted Butter",
+      "Onions",
+      "Cumin",
+      "Flour",
+      "Egg",
+      "Olive oil",
+      "Water"
+    ],
+    "directions": [
+      "Mix the flour, water, egg, olive oil, pinch of salt into a big bowl until it forms into a ball of dough",
+      "Break into 4 smaller balls and set",
+      "While the dough sets, mix together your ground beef, diced onions, salt, pepper, cumin, and a bit of olive oil together and mix",
+      "Take one ball of the dough and roll evenly on all sides until it's so flat and stretched it's see-through",
+      "Take your melted butter and spread evenly all throughout the dough",
+      "Roll the dough up from bottom to top very closely, no air should be stuck in between",
+      "Once it's long, stretch it a little more, but prevent it from ripping",
+      "Cut 1-inch pieces and stick them in the fridge",
+      "Repeat that process with the rest of the doughs",
+      "Once the dough pieces from the fridge get a tad bit hard enough the butter doesn't melt, roll them out trying not to lose the flower circular lines within the middle until it's 2 cm thick",
+      "Using your spoon, scoop out the meat onto the dough and close using all four sides making it into a square",
+      "Place on the pan and finish with egg yolks on top for color and some sesame seeds, into the preheated oven at 350 degrees Fahrenheit until the top and bottom become golden brown"
+    ],
+    "cook_time": "50 min",
+    "serving_size": 5,
+    "src": "https://i0.wp.com/www.gastrosenses.com/wp-content/uploads/2017/11/Uzbek-Samsa-1.jpg?w=1400&quality=100&strip=all&ssl=1"
+  }
+]

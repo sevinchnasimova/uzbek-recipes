@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <script type="module" src="nav.js"></script>
+  <script type="module">
+    const recipes = await fetch("./recipes.json").then((response) =>
+      response.json()
+    );
+
+    const recipesGridElement = document.getElementById("recipes-grid");
+
+    recipes.forEach((recipe) => {
+      const recipeCellElement = document
+        .getElementById("recipe-cell")
+        .content.cloneNode(true);
+      console.log(recipeCellElement);
+      recipeCellElement.querySelector("img").src = recipe.src;
+      recipeCellElement.getElementById("name").textContent = recipe.name;
+      recipeCellElement.getElementById("description").textContent =
+        recipe.description;
+      const currentUrl = new URL(window.location.href);
+      const recipeUrl = new URL("http://" + currentUrl.host + "/recipe.html");
+      recipeUrl.searchParams.append("recipe", recipe.name);
+      recipeCellElement.querySelector("a").href = recipeUrl;
+      recipesGridElement.appendChild(recipeCellElement);
+    });
+  </script>
+  <body>
+    <div class="w-1/2 ml-64 pt-4">
+      <div class="grid gap-4 grid-cols-2" id="recipes-grid">
+        <template id="recipe-cell">
+          <a>
+            <div>
+              <img
+                src="https://i0.wp.com/www.gastrosenses.com/wp-content/uploads/2017/11/Uzbek-Samsa-1.jpg"
+                class="h-80 w-96 object-cover"
+              />
+              <div class="h-16 w-96">
+                <div class="pl-4">
+                  <p class="text-xl" id="name">samsa</p>
+                  <p id="description">blah blah blah</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </template>
+      </div>
+    </div>
+  </body>
+</html>
