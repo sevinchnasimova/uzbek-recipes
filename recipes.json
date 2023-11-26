@@ -15,7 +15,7 @@
       "Black Seed Oil"
     ],
     "directions": [
-      "Add the two oils and let it get super heated until the smoke comes out",
+      "Add the two oils and let it get superheated until the smoke comes out",
       "Add the meat and let it fry",
       "After the meat gets dark brown, add the onions and let it fry more",
       "Add the thinly sliced carrots on top of the meat and make sure it fully covers the meat",
@@ -24,9 +24,10 @@
       "After, add the washed rice on top of the carrots with water until it covers the rice fully and cover the lid",
       "Once the rice is soft, the food is ready."
     ],
-    "cook_time": "1 hour 30 Min",
+    "cook_time": "1 hour 30 min",
     "serving_size": 1,
-    "src": "https://www.alyonascooking.com/wp-content/uploads/2019/05/plov-recipe-9.jpg"
+    "src": "https://www.alyonascooking.com/wp-content/uploads/2019/05/plov-recipe-9.jpg",
+    "description": "This National Dish is easy and delicious. Plov is a dish that is classic and usually served on holidays and to guests. This dish brings people together and is a favorite for many Central Asians."
   },
   {
     "name": "SAMBUSA",
@@ -58,6 +59,129 @@
     ],
     "cook_time": "50 min",
     "serving_size": 5,
-    "src": "https://i0.wp.com/www.gastrosenses.com/wp-content/uploads/2017/11/Uzbek-Samsa-1.jpg?w=1400&quality=100&strip=all&ssl=1"
+    "src": "https://i0.wp.com/www.gastrosenses.com/wp-content/uploads/2017/11/Uzbek-Samsa-1.jpg?w=1400&quality=100&strip=all&ssl=1",
+    "description": "This popular dish is loved by many Central Asians. You can find the Mantu dish on special occasions or large gatherings or any day of the year. This is a traditional meal the whole family will enjoy."
+  },
+  {
+    "name": "SHASHLIK/KEBABS",
+    "ingredients": [
+      "Ground beef",
+      "Diced onions",
+      "Salt",
+      "Pepper",
+      "Cumin",
+      "Steak seasoning",
+      "Oil"
+    ],
+    "directions": [
+      "Add everything into a mixing bowl and mix them together",
+      "Put small patches of meat through the skewers, thin",
+      "Freeze for thirty minutes",
+      "Once the barbeque coal is ready, place the skewers on top and cook until brown and almost hard",
+      "Serve with freshly cut onions on top and the kebabs are ready"
+    ],
+    "cook_time": "2 hr 20 min",
+    "serving_size": 4,
+    "src": "https://canaan.travel/wp-content/uploads/2020/11/uzbekskiy-shashlik.jpg",
+    "description": "This is a popular picnic pick across Central Asia. Shashlik is a delicious appetizer that is often served in restaurants and picnics."
+  },
+  {
+    "name": "SHURBO SOUP",
+    "ingredients": [
+      "Carrots",
+      "Potatoes",
+      "Red Pepper",
+      "Onions",
+      "Meat",
+      "Chickpeas",
+      "Tomato",
+      "Salt",
+      "Pepper",
+      "Vegeta"
+    ],
+    "directions": [
+      "Boil the meat in a separate pot. Once it boils for a good 20 minutes, throw out the meat water and wash the meat",
+      "In a big pot bring water to boil",
+      "Add your meat, chopped up carrots, red pepper, onions",
+      "Let that cook for at least an hour on low heat",
+      "Add the potatoes along with salt, pepper to taste and a teaspoon of vegeta",
+      "After the potato is soft, your soup is ready.",
+      "Add some cilantro to your bowl and chickpeas and the dish is complete."
+    ],
+    "cook_time": "1 hr 20 min",
+    "serving_size": 1,
+    "src": "https://www.sweetandsavorybyshinee.com/wp-content/uploads/2020/07/Grilled-Pork-Kebabs-Shashlyk-6.jpg",
+    "description": "This is a traditional, light, vegetable soup in Central Asia. Shurbo is a common healthy meal that can be a break from other heavy dishes."
+  },
+  {
+    "name": "BICHAK",
+    "ingredients": [
+      "Flour",
+      "Salt",
+      "Water",
+      "Olive oil",
+      "Greens(Spinach, parsley, celery, cilantro)",
+      "Onions"
+    ],
+    "directions": [
+      "After mixing the flour, water, pinch of salt, olive oil, set aside for half an hour",
+      "Dice the onions and greens and mix them together with olive oil, salt and pepper",
+      "Make three inch square cuts of the dough after rolling it flat",
+      "Add a spoonful of the greens mix",
+      "Cover the bottom flat",
+      "Grease the bottom of pans and put in the bichak to the preheated oven at 350F until the top has become golden brown"
+    ],
+    "cook_time": "30 min",
+    "serving_size": 4,
+    "src": "https://zira.uz/wp-content/uploads/2023/03/bichak-samsa.jpg",
+    "description": "This is a popular stuffed baked or fried pastry. Bichaks are puffy, flaky and can be shaped in triangles, circles or quadrangles which make them unique."
+  },
+  {
+    "name": "CHIBUREK",
+    "ingredients": [
+      "Flour",
+      "Hot Water",
+      "Eggs",
+      "Oil",
+      "Salt",
+      "Ground Beef",
+      "Pepper",
+      "Paprika",
+      "Onion"
+    ],
+    "directions": [
+      "Add the flour, hot water, oil, egg, salt together in a bowl and mix until formable into a ball",
+      "Add the ground beef into a bowl and season with salt, pepper, paprika and mix along with diced onions",
+      "Cut 4 inch circles of dough and add the seasoned meat inside, fold and press tightly on the ends",
+      "Heat the oil and add the chiburek",
+      "Cook until golden brown on medium heat"
+    ],
+    "cook_time": "40 min",
+    "serving_size": 4,
+    "src": "https://allweeat.com/wp-content/uploads/2022/02/18-2-2000x1333.jpg",
+    "description": "This fried pastry is delicious and a popular street food. Chiburekis are simple and easy to make. They can be a light snack or a restaurant meal."
+  },
+  {
+    "name": "KURUTOB",
+    "ingredients": [
+      "Fatir/Flakey Bread",
+      "2 cups Labneh Sour Cream",
+      "2 Onions",
+      "1 Stick Butter",
+      "Tomatoes",
+      "Cucumbers",
+      "Parsley"
+    ],
+    "directions": [
+      "Chop the 2 onions thinly and use 1 ½ onions to fry with the butter until golden brown",
+      "Make salad with the tomatoes, cucumbers and half the onions with some parsley. Season with pepper and salt and mix",
+      "Rip apart the bread into small 1-inch pieces and scatter them around a large family plate",
+      "After the fried onions are done, add that on top of the bread along with the liquid Labneh sour cream on top",
+      "Then finish it with the salad and you're ready to present"
+    ],
+    "cook_time": "50 min",
+    "serving_size": 1,
+    "src": "https://trektajikistan.com/wp-content/uploads/2021/10/qurutob-2.jpg",
+    "description": "This is a creamy mix of vegetables and flatbread. Kurutob is a popular Central Asian cuisine that takes a step away from meat-filled meals. A special ingredient, qurut makes this meal special."
   }
 ]
