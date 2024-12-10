@@ -29,8 +29,58 @@
       recipeCellElement.querySelector("a").href = recipeUrl;
       recipesGridElement.appendChild(recipeCellElement);
     });
+
+    // Function to update the results dropdown
+    function updateResults(query) {
+      const resultsDiv = document.getElementById("results");
+      resultsDiv.innerHTML = "";
+
+      const filteredRecipes = recipes.filter((recipe) =>
+        recipe.name.toLowerCase().includes(query.toLowerCase())
+      );
+
+      filteredRecipes.forEach((recipe) => {
+        const div = document.createElement("div");
+        div.textContent = recipe.name;
+        div.classList.add("p-2", "cursor-pointer");
+
+        // Add event listener to click on a recipe
+        div.onclick = () => {
+          window.location.href = `recipe.html?recipe=${recipe.name}`;
+        };
+
+        resultsDiv.appendChild(div);
+      });
+
+      resultsDiv.style.display = filteredRecipes.length > 0 ? "block" : "none";
+    }
+
+    // Event listener for keyup (search query)
+    document.getElementById("searchBar").addEventListener("keyup", function () {
+      const query = this.value;
+      updateResults(query);
+    });
+
+    // Hide results when clicking outside the search bar
+    document.addEventListener("click", function (event) {
+      const resultsDiv = document.getElementById("results");
+      const searchBar = document.getElementById("searchBar");
+      if (!searchBar.contains(event.target)) {
+        resultsDiv.style.display = "none";
+      }
+    });
+
+    // Show results when the search bar is focused
+    document.getElementById("searchBar").addEventListener("focus", function () {
+      const query = this.value;
+      if (query) updateResults(query);
+    });
   </script>
   <body>
+    <div class="text-xl container">
+      <input type="text" id="searchBar" placeholder="Search recipes..." />
+      <div id="results"></div>
+    </div>
     <div class="w-[48rem] ml-64 pt-4 mb-16 snap-none">
       <div class="grid gap-[4rem] grid-cols-2" id="recipes-grid">
         <template id="recipe-cell">
@@ -59,3 +109,53 @@
     </div>
   </body>
 </html>
+
+<title>Recipe Search</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+  }
+
+  #searchBar {
+    padding: 10px;
+    width: 50%; /* Keep the search bar width at 50% */
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+  }
+
+  #results,
+  #dropdown {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%; /* Set width to 50%, same as search bar */
+  }
+
+  #results div,
+  #dropdown div {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+  }
+
+  #results div:hover,
+  #dropdown div:hover {
+    background-color: #f0f0f0;
+  }
+</style>

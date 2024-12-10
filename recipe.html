@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css.css">
+    
   </head>
   <script type="module" src="nav.js"></script>
   <script type="module">
@@ -55,6 +57,8 @@
     document.getElementById("serving-size").textContent =
       currRecipe["serving_size"];
   </script>
+
+
   <body>
     <div class="w-[40%] ml-64 pt-4 mb-16">
       <div class="flex flex-col content-start">
@@ -106,3 +110,219 @@
     </div>
   </body>
 </html>
+
+
+
+<div id="container" class="absolute right-0 top-1/4 transform translate-x-0">
+<div id="container">
+  <div class="steam" id="steam1"> </div>
+  <div class="steam" id="steam2"> </div>
+  <div class="steam" id="steam3"> </div>
+  <div class="steam" id="steam4"> </div>
+
+  <div id="cup">
+    <p class="text-lg mt-4 text-center mx-auto">everything is better with tea</p>
+    <div id="cup-body">
+      <div id="cup-shade"></div>
+    </div>
+    <div id="cup-handle"></div>
+  </div>
+
+  <div id="saucer"></div>
+
+  <div id="shadow"></div>
+</div>
+
+
+
+</head>
+<body>
+
+   
+
+
+
+
+
+
+
+
+<!-- 5 star rating system -->
+ <!---
+<div id="rating-section" style="background-color: #f3f4f6; padding: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+  <p class="text-2xl font-bold">Rate this recipe!</p>
+  
+  <div id="star-rating" style="display: flex; gap: 8px; margin-top: 16px; justify-content: center;">
+    <span class="star" data-value="1" style="font-size: 2rem; cursor: pointer; color: gray;">&#9734;</span>
+    <span class="star" data-value="2" style="font-size: 2rem; cursor: pointer; color: gray;">&#9734;</span>
+    <span class="star" data-value="3" style="font-size: 2rem; cursor: pointer; color: gray;">&#9734;</span>
+    <span class="star" data-value="4" style="font-size: 2rem; cursor: pointer; color: gray;">&#9734;</span>
+    <span class="star" data-value="5" style="font-size: 2rem; cursor: pointer; color: gray;">&#9734;</span>
+  </div>
+  
+  <button id="submit-rating-btn" style="border: 1px solid; padding: 8px 16px; margin-top: 16px; background-color: #3b82f6; color: white; cursor: pointer;">Submit Rating</button>
+  
+  <p id="rating" style="margin-top: 16px; font-size: 1.25rem; font-weight: bold; text-align: center;">Average Rating: Not rated yet</p>
+</div>
+
+
+
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe with Comments and Sentiment Analysis</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    #comment-section {
+      background-color: #f3f4f6;
+      padding: 16px;
+      margin-top: 32px;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 8px;
+    }
+    #comment-box {
+      width: 100%;
+      height: 100px;
+      padding: 8px;
+      margin-top: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    #submit-comment-btn {
+      margin-top: 16px;
+      padding: 8px 16px;
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    #submit-comment-btn:hover {
+      background-color: #2563eb;
+    }
+    #comments-list {
+      margin-top: 32px;
+    }
+    .comment {
+      margin-top: 16px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .sentiment {
+      font-size: 0.85rem;
+      margin-right: 8px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  
+
+  
+  <div id="comment-section">
+    <p class="text-2xl font-bold">Leave a Comment!</p>
+
+    <textarea id="comment-box" placeholder="Write your thoughts..."></textarea>
+
+    <div id="sentiment-feedback" style="margin-top: 8px; font-size: 1rem; font-style: italic; color: gray;">
+      Type your comment to see the sentiment analysis...
+    </div>
+
+    <button id="submit-comment-btn">Submit Comment</button>
+
+    <div id="comments-list">
+      <h3 class="text-xl font-bold">Comments</h3>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const commentBox = document.getElementById("comment-box");
+      const sentimentFeedback = document.getElementById("sentiment-feedback");
+      const submitCommentBtn = document.getElementById("submit-comment-btn");
+      const commentsList = document.getElementById("comments-list");
+
+    
+      function analyzeSentiment(comment) {
+        const positiveWords = ['love', 'delicious', 'amazing', 'great', 'wonderful'];
+        const negativeWords = ['bad', 'disappointing', 'awful', 'hate', 'terrible'];
+
+        let sentiment = 'neutral';  
+
+        if (positiveWords.some(word => comment.toLowerCase().includes(word))) {
+          sentiment = 'positive';
+        } else if (negativeWords.some(word => comment.toLowerCase().includes(word))) {
+          sentiment = 'negative';
+        }
+
+        return sentiment;
+      }
+
+   
+      commentBox.addEventListener("input", function () {
+        const comment = commentBox.value;
+        const sentiment = analyzeSentiment(comment);
+
+        if (sentiment === 'positive') {
+          sentimentFeedback.textContent = '😊 This seems like a positive comment!';
+          sentimentFeedback.style.color = 'green';
+        } else if (sentiment === 'negative') {
+          sentimentFeedback.textContent = '😞 This seems like a negative comment.';
+          sentimentFeedback.style.color = 'red';
+        } else {
+          sentimentFeedback.textContent = '😐 This comment is neutral.';
+          sentimentFeedback.style.color = 'gray';
+        }
+      });
+
+  
+      submitCommentBtn.addEventListener("click", function () {
+        const comment = commentBox.value.trim();
+
+        if (comment) {
+          const sentiment = analyzeSentiment(comment);
+
+          const newComment = document.createElement("div");
+          newComment.classList.add("comment");
+
+          const sentimentTag = document.createElement("span");
+          sentimentTag.classList.add("sentiment");
+
+          if (sentiment === 'positive') {
+            sentimentTag.textContent = '😊 Positive';
+            sentimentTag.style.color = 'green';
+          } else if (sentiment === 'negative') {
+            sentimentTag.textContent = '😞 Negative';
+            sentimentTag.style.color = 'red';
+          } else {
+            sentimentTag.textContent = '😐 Neutral';
+            sentimentTag.style.color = 'gray';
+          }
+
+          newComment.appendChild(sentimentTag);
+          newComment.appendChild(document.createTextNode(comment));
+
+          commentsList.appendChild(newComment);
+
+          commentBox.value = '';
+          sentimentFeedback.textContent = 'Type your comment to see the sentiment analysis...';
+          sentimentFeedback.style.color = 'gray';
+        } else {
+          alert('Please enter a comment before submitting.');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
+
