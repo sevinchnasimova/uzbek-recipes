@@ -74,7 +74,7 @@ body {
     border-radius: 0 0 150px 150px;
     background-color: #001f3f; /* Very dark blue */
     background-image: url('cupimg.jpeg'); /* Add your floral pattern image */
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     margin: auto;
